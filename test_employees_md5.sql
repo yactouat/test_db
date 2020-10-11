@@ -55,7 +55,7 @@ INSERT INTO `expected_values` VALUES
 SELECT table_name, recs AS expected_records, crc_md5 AS expected_crc FROM expected_values;
 
 DROP TABLE IF EXISTS tchecksum;
-CREATE TABLE tchecksum (chk char(100)) ENGINE=blackhole;
+CREATE TABLE tchecksum (chk char(100)) ENGINE=InnoDB;
 
 SET @crc= '';
 
